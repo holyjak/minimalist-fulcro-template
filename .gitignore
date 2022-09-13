@@ -1,0 +1,17 @@
+/target
+/classes
+/checkouts
+*.jar
+*.class
+.calva/output-window/output.calva-repl
+/.cpcache
+/.lsp/sqlite*.db
+/.nrepl-history
+/.nrepl-port
+/.rebel_readline_history
+/.socket-repl-port
+.clj-kondo/.cache/
+.shadow-cljs/
+resources/public/js/
+node_modules
+.portal/
