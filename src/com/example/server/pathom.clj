@@ -24,6 +24,12 @@
    ::pco/output [:i-fail]}
   (throw (ex-info "Fake resolver error" {})))
 
+(pco/defresolver list
+  [_ _]
+  {::pco/input  []
+   ::pco/output [:list]}
+  {:list (map identity [{:id 1 :name "one"}])})
+
 ;; (pc/defresolver person
 ;;   [_ {id :person/id}]
 ;;   {::pco/input  [:person/id]
@@ -43,7 +49,7 @@
 
 (def my-resolvers-and-mutations
   "Add any resolvers you make to this list (and reload to re-create the parser)"
-  [#_index-explorer create-random-thing i-fail])
+  [list #_index-explorer create-random-thing i-fail])
 
 (def default-env
   (-> {:com.wsscode.pathom3.error/lenient-mode? true}

@@ -11,9 +11,12 @@
     [com.fulcrologic.fulcro.dom :as dom :refer [button div form h1 h2 h3 input label li ol p ul]]))
 
 (defsc Root [this props]
-  {:query [[df/marker-table :load-progress] :new-thing]}
+  {:query [:list [df/marker-table :load-progress] :new-thing]}
   (div
-   (p "Hello from the ui/Root component!")
+   (p "Hello from the ui/Root component! !!")
+   (div {:style {:border "1px dashed", :margin "1em", :padding "1em"}}
+    (dom/pre (pr-str (:list props))) 
+    (button {:onClick #(df/load! this :list (rc/nc '[*]))} "Load list"))
    (div {:style {:border "1px dashed", :margin "1em", :padding "1em"}}
     (p "Invoke a load! that fails and display the error:")
     (when-let [m (get props [df/marker-table :load-progress])]
