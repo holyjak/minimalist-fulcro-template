@@ -30,9 +30,9 @@ or, if you have [Babashka](https://babashka.org/) installed, via
 
 NOTE: For Calva, it is best to start a client build and REPL from the editor - [run Jack-in](https://calva.io/connect/#jack-in-let-calva-start-the-repl-for-you), selecting _shadow-cljs_ then the `:main` build. 
 
-Now **start the server**: load `com.example.server.server` into the Shadow REPL - this will also evaluate the `(defonce stop-fn (atom start))` line, starting the server.
+Now **start the server**: load `com.example.server.main` into the Shadow REPL - this will also evaluate the `(defonce stop-fn (atom start))` line, starting the server.
 
-NOTE: Now if you ever change Pathom resolvers or something, run the restart code in the `(comment ...)` in the server ns.
+NOTE: Now if you ever change Pathom resolvers or something, run the restart code in the `(comment ...)` in the main ns.
 
 Finally, navigate to http://localhost:8008. Note: You can switch to the browser REPL by evaluating `(shadow/repl :main)` in the REPL. (Calva does the latter for you).
 
