@@ -1,12 +1,12 @@
 {:paths ["src" "resources"],
  :deps
  {org.clojure/clojure {:mvn/version "1.11.1"},
-  ;com.fulcrologic/fulcro {:mvn/version "3.5.25"},
-  com.fulcrologic/fulcro {:local/root "/Users/holyjak/Projects/external/fulcro-all/fulcro"},
-  com.wsscode/pathom3 {:mvn/version "2022.08.29-alpha"},
-  ring/ring-defaults                     {:mvn/version "0.3.3"}
+  com.fulcrologic/fulcro {:mvn/version "3.6.1"},
+  com.wsscode/pathom3 {:mvn/version "2023.01.31-alpha"},
+  ring/ring-defaults                     {:mvn/version "0.3.4"}
   ring/ring-core                         {:mvn/version "1.9.6"}
-  http-kit/http-kit                      {:mvn/version "2.6.0"}
+  http-kit/http-kit                      {:mvn/version "2.6.0"} 
+  com.taoensso/encore {:mvn/version "3.51.1"} ; upgrade from 3.45.0 to get rid of abs warning
   holyjak/fulcro-troubleshooting
   {;:git/tag "latest",
    :git/sha "c7a458f1ba3ae1f7c06e66d6d588be681c9c21c3",
@@ -14,7 +14,7 @@
  :aliases
  {:dev ; for shadow
   {:extra-deps
-   {thheller/shadow-cljs {:mvn/version "2.20.1"},
+   {thheller/shadow-cljs {:mvn/version "2.22.2"},
     binaryage/devtools {:mvn/version "1.0.6"},
     cider/cider-nrepl {:mvn/version "0.28.5"},
     cider/piggieback {:mvn/version "0.5.3"}}}}}
